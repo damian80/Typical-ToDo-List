@@ -20,3 +20,17 @@ add.addEventListener("submit", e => {
     addForm.reset();
   }
 });
+// delete todos
+list.addEventListener("click", e => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
+  }
+});
+// search&filters
+const filterTodos = (term) => {
+    array.from(list.children)
+    .filter((todo) => !todo.textContent.toLowerCase()includes(term))
+    .foreach((todo) => todo.classList.remove('filtered'));
+
+    // cdn.......
+};
